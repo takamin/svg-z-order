@@ -28,7 +28,11 @@
   },
   "homepage": "https://github.com/takamin/svg-z-order#readme",
   "browser": {
-      "d3":     "./bower_components/d3/d3.min.js",
-      "svg-z-order": "./svg-z-order.js"
+    "d3": "./bower_components/d3/d3.min.js",
+    "svg-z-order": "./svg-z-order.js"
+  },
+  "devDependencies": {
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-md2html": "^0.3.1"
   }
 }

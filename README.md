@@ -6,17 +6,26 @@ A module to manipulate the Z-Order of a SVG element.
 Sample
 ------
 
+## Overview
+
 ```javascript
 var svgz = require("svg-z-order");
 
 var g = svg.getElementById("foo");
 svgz.element(g).toTop();
 
-// with D3.js
+// With D3.js
 var d3g = d3.select("#foo");
 svgz.element(d3g.node()).toTop();
 
 ```
+
+## toTop/toBottom/toFront/toBack ([Code](sample/web/index.js))
+
+<div id="svg-z-order-sample"></div>
+<script src="sample/web/sample-index.js"></script>
+
+
 
 APIs
 ----
@@ -31,3 +40,4 @@ LICENSE
 -------
 
 This software is released under the MIT License, see [LICENSE](LICENSE)
+

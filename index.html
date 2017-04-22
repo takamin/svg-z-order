@@ -1,0 +1,29 @@
+<h1 id="svg-z-order">SVG-Z-ORDER</h1>
+<p>A module to manipulate the Z-Order of a SVG element.</p>
+<h2 id="sample">Sample</h2>
+<h2 id="overview">Overview</h2>
+<pre><code class="lang-javascript">var svgz = require(&quot;svg-z-order&quot;);
+
+var g = svg.getElementById(&quot;foo&quot;);
+svgz.element(g).toTop();
+
+// With D3.js
+var d3g = d3.select(&quot;#foo&quot;);
+svgz.element(d3g.node()).toTop();
+</code></pre>
+<h2 id="totop-tobottom-tofront-toback-code-sample-web-index-js-">toTop/toBottom/toFront/toBack (<a href="sample/web/index.js">Code</a>)</h2>
+<p><div id="svg-z-order-sample"></div></p>
+<script src="sample/web/sample-index.js"></script>
+
+
+
+<h2 id="apis">APIs</h2>
+<ul>
+<li>svgz.element(domElement) - Creates SVGZElement instance referencing a dom element.</li>
+<li>SVGZElement.toTop() - Brings up the element to top of the all sibling elements.</li>
+<li>SVGZElement.toBottom() - Brings down the element to bottom of the all sibling elements.</li>
+<li>SVGZElement.moveUp(element/n) - Moves up the element to the front of specified target element or n-times.</li>
+<li>SVGZElement.moveDown(element/n) - Moves down the element to behind of the specified target element or n-times.</li>
+</ul>
+<h2 id="license">LICENSE</h2>
+<p>This software is released under the MIT License, see <a href="LICENSE">LICENSE</a></p>

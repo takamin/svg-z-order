@@ -4,7 +4,7 @@ module.exports = function(grunt) {
             build: {
                 files: {
                     "sample/web/index-bundle.js":
-                        [ "sample/web/index.js" ]
+                        [ "sample/web/index.js" ],
                 }
             }
         },
@@ -15,10 +15,28 @@ module.exports = function(grunt) {
                         [ "sample/web/index-bundle.js" ]
                 }
             }
+        },
+        md2html: {
+            build: {
+                files: {
+                    "./index.html" : [ "./README.md" ]
+                }
+            }
+        },
+        copy: {
+            sample: {
+                files: {
+                    "sample/web/sample-index.js":
+                        [ "sample/web/index-bundle.min.js" ]
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks("grunt-browserify");
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.registerTask("default", ["browserify", "uglify"]);
+    grunt.loadNpmTasks('grunt-md2html');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.registerTask("default",
+            ["browserify", "uglify", "md2html", "copy:sample"]);
 };
