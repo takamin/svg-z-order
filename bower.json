@@ -1,0 +1,21 @@
+{
+  "name": "svg-z-order",
+  "authors": [
+    "Koji Takami<vzg03566@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^4.8.0"
+  }
+}
