@@ -20,6 +20,9 @@ svgz.element(d3g.node()).toTop();
 
 ```
 
+If `require` is NOT available,
+use global `svgz_element` function instead of 'svgz.element' method.
+
 ### Sample on the WEB
 
 #### APIs to Change Z-Order: `toTop`/`toBottom`/`moveUp`/`moveDown` ([Code](sample/web/index.js))

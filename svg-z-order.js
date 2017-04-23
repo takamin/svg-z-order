@@ -1,18 +1,26 @@
 (function() {
     "use strict";
 
-    module.exports = {
-        element : function(svgElement) {
-            if(!svgElement) {
-                throw new Error("a null element specified.");
-            }
-            var svgz = new SVGZElement();
-            svgzSetElement(svgz, svgElement);
-            return svgz;
+    var svgz_element = function(svgElement) {
+        if(!svgElement) {
+            throw new Error("a null element specified.");
         }
+        var svgz = new SVGZElement();
+        svgzSetElement(svgz, svgElement);
+        return svgz;
     };
 
-    function SVGZElement() {
+    try {
+        module.exports = {
+            element : svgz_element
+        };
+    } catch(err) {
+        (function(global) {
+            global["svgz_element"] = svgz_element;
+        }(Function("return this;")()));
+    }
+
+    var SVGZElement = function() {
         this._element = null;
     }
 
@@ -91,11 +99,11 @@
         }
     };
 
-    function svgzSetElement(svgz, svgElement) {
+    var svgzSetElement = function(svgz, svgElement) {
         svgz._element = svgElement;
     }
 
-    function parentNodeOf(element) {
+    var parentNodeOf = function(element) {
         if(!("parentNode" in element)) {
             throw new Error("There is not parentNode");
         }
@@ -106,7 +114,7 @@
         return parentNode;
     };
 
-    function getRelInsTarget(baseElement, m) {
+    var getRelInsTarget = function(baseElement, m) {
         var parentNode = parentNodeOf(baseElement);
         var siblings = childElementsOf(parentNode);
         var n = siblings.length;
@@ -136,7 +144,7 @@
         return actualTarget;
     }
 
-    function getRelDist(from, to) {
+    var getRelDist = function(from, to) {
         var parentNode = parentNodeOf(from);
         var siblings = childElementsOf(parentNode);
         var indexFrom = siblings.indexOf(from);
@@ -147,7 +155,7 @@
         return indexTo - indexFrom;
     }
 
-    function childElementsOf(parentNode) {
+    var childElementsOf = function(parentNode) {
         var childElements = [];
         Array.from(parentNode.childNodes).map(function(node) {
             if(node.nodeType == 1) {
