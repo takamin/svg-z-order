@@ -6,7 +6,7 @@ A module to manipulate the Z-Order of a SVG element.
 Sample
 ------
 
-## Overview
+### Overview
 
 ```javascript
 var svgz = require("svg-z-order");
@@ -20,7 +20,9 @@ svgz.element(d3g.node()).toTop();
 
 ```
 
-## toTop/toBottom/toFront/toBack ([Code](sample/web/index.js))
+### Sample on the WEB
+
+#### APIs to Change Z-Order: `toTop`/`toBottom`/`toFront`/`toBack` ([Code](sample/web/index.js))
 
 <div id="svg-z-order-sample"></div>
 <script src="sample/web/sample-index.js"></script>
