@@ -3,10 +3,10 @@ SVG-Z-ORDER
 
 A module to manipulate the Z-Order of a SVG element.
 
-Sample
-------
+<img src="images/svg-z-order.svg" width="100%" style="max-width:1260px"/>
 
-### Overview
+Overview
+--------
 
 ```javascript
 var svgz = require("svg-z-order");
@@ -23,12 +23,13 @@ svgz.element(d3g.node()).toTop();
 If `require` is NOT available,
 use global `svgz_element` function instead of 'svgz.element' method.
 
-### Sample on the WEB
+Sample Code
+-----------
 
 * [APIs to Change Z-Order: `toTop`/`toBottom`/`moveUp`/`moveDown`](sample/web/index.js)
 
 To run the sample above on the WEB,
-Visit this [project page](https://takamin.github.io/svg-z-order/).
+Visit the [project page](https://takamin.github.io/svg-z-order/).
 
 
 APIs
