@@ -1,6 +1,6 @@
 {
   "name": "svg-z-order",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A module to manipulate the z-order of a SVG elements",
   "main": "svg-z-order.js",
   "scripts": {
@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/takamin/svg-z-order/issues"
   },
-  "homepage": "https://github.com/takamin/svg-z-order#readme",
+  "homepage": "https://takamin.github.io/svg-z-order",
   "browser": {
       "d3":     "./bower_components/d3/d3.min.js",
       "svg-z-order": "./svg-z-order.js"
