@@ -3,7 +3,8 @@ SVG-Z-ORDER
 
 A module to manipulate the Z-Order of a SVG element.
 
-<img src="images/svg-z-order.svg" width="100%" style="max-width:1260px"/>
+<img src="https://github.com/takamin/svg-z-order/blob/master/images/svg-z-order.png"
+width="100%" style="max-width:1260px"/>
 
 Overview
 --------
