@@ -21,7 +21,7 @@ svgz.element(d3g.node()).toTop();
 ```
 ### Sample on the WEB
 
-* [APIs to Change Z-Order: `toTop`/`toBottom`/`toFront`/`toBack`](sample/web/index.js)
+* [APIs to Change Z-Order: `toTop`/`toBottom`/`moveUp`/`moveDown`](sample/web/index.js)
 
 To run the sample above on the WEB,
 Visit this [project page](https://takamin.github.io/svg-z-order/).
