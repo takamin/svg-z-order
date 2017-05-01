@@ -40,6 +40,7 @@ APIs
 * SVGZElement.toBottom() - Brings down the element to bottom of the all sibling elements.
 * SVGZElement.moveUp(element/n) - Moves up the element to the front of specified target element or n-times.
 * SVGZElement.moveDown(element/n) - Moves down the element to behind of the specified target element or n-times.
+* SVGZElement.moveTo(element/index) - Moves the element to the specified position.
 
 LICENSE
 -------

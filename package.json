@@ -1,6 +1,6 @@
 {
   "name": "svg-z-order",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "A module to manipulate the z-order of a SVG elements",
   "main": "svg-z-order.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "z-order",
     "z-index"
   ],
-  "author": "vzg03566@gmail.com",
+  "author": "Koji Takami<vzg03566@gmail.com>",
   "license": "MIT",
   "dependencies": {},
   "bugs": {

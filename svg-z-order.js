@@ -62,6 +62,7 @@
             throw err;
         }
     };
+
     SVGZElement.prototype.moveDown = function(n) {
         try {
             if(n == null) {
@@ -94,6 +95,42 @@
             var target = getRelInsTarget(this._element, n);
             parentNode.insertBefore(this._element, target);
             return this;
+        } catch(err) {
+            throw err;
+        }
+    };
+
+    /**
+     * Move the element to the position specified.
+     *
+     * PARAMETER
+     *
+     * distination -    A new position to move.
+     *                  It could be specified either a number or
+     *                  dom element.
+     *                  If a number is specified, it is an index
+     *                  of child elements in the parent node and
+     *                  references a specific element.
+     */
+    SVGZElement.prototype.moveTo = function(distination) {
+        try {
+            var parentNode = parentNodeOf(this._element);
+            var siblings = childElementsOf(parentNode);
+            var indexFrom = siblings.indexOf(this._element);
+            if(distination == null) {
+                throw new Error("A position must be specified.");
+            } else if(typeof(distination) === "number") {
+                if(distination < 0 || siblings.length < distination) {
+                    throw new Error("Invalid position specified.");
+                }
+            } else {
+                if(parentNodeOf(distination) !== parentNode) {
+                    throw new Error("The target node not found.");
+                }
+                distination = siblings.indexOf(distination);
+            }
+            var n = distination - indexFrom;
+            return this.moveRelative(n);
         } catch(err) {
             throw err;
         }
