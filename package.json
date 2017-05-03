@@ -1,6 +1,6 @@
 {
   "name": "svg-z-order",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A module to manipulate the z-order of a SVG elements",
   "main": "svg-z-order.js",
   "scripts": {
