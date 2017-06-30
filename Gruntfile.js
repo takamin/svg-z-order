@@ -16,13 +16,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        md2html: {
-            build: {
-                files: {
-                    "./index.html" : [ "./README.md" ]
-                }
-            }
-        },
         copy: {
             sample: {
                 files: {
@@ -35,8 +28,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks("grunt-browserify");
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-md2html');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.registerTask("default",
-            ["browserify", "uglify", "md2html", "copy:sample"]);
+            ["browserify", "uglify", "copy:sample"]);
 };
