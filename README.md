@@ -32,6 +32,12 @@ Sample Code
 To run the sample above on the WEB,
 Visit the [project page](https://takamin.github.io/svg-z-order/).
 
+Installation
+------------
+
+```bash
+$ npm install --save svg-z-order
+```
 
 APIs
 ----
@@ -42,6 +48,12 @@ APIs
 * SVGZElement.moveUp(element/n) - Moves up the element to the front of specified target element or n-times.
 * SVGZElement.moveDown(element/n) - Moves down the element to behind of the specified target element or n-times.
 * SVGZElement.moveTo(element/index) - Moves the element to the specified position.
+
+Repository
+----------
+
+* [npm](https://www.npmjs.com/package/svg-z-order)
+* [GitHub](https://github.com/takamin/svg-z-order) ([gh-pages](https://takamin.github.io/svg-z-order/))
 
 LICENSE
 -------
